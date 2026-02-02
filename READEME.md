@@ -4,7 +4,7 @@ Bienvenue dans ce dépôt consacré à la **Piscine d’Epitech**, la période i
 
 ## À propos de la piscine
 
-- **Durée :** 4 semaines environ  
+  
 - **Langage principal :** C (avec parfois du shell ou d’autres outils selon les exercices)  
 - **Objectif :**  
   - Développer des compétences en algorithmique et en programmation  
@@ -13,7 +13,7 @@ Bienvenue dans ce dépôt consacré à la **Piscine d’Epitech**, la période i
 
 ## Contenu du dépôt
 
-- **Jour 1 → Jour 28** : exercices quotidiens et projets  
+
 - **Modules :**  
   - Algorithmique et logique  
   - Manipulation de chaînes et tableaux  
