@@ -11,11 +11,9 @@ int my_getnbr(char const *str){
     int k = 0; //compteur
     int posi_prem_nbr ;
     int nombre = 0;
-    int dernier_chiffre = 0;
+    
    
-    
-    
-        while ( str[i] <= '0' || str[i] >= '9')
+    while ( str[i] <= '0' || str[i] >= '9')
     {
         i++; 
         posi_prem_nbr = i ; //position du premier chiffre
@@ -32,38 +30,35 @@ int my_getnbr(char const *str){
     
     for ( k = 0;  k < j; k++) { puissance = puissance* 10;}
 
+
     k = posi_prem_nbr;
-
-    
-
-        while ( !puissance == 0 && k <= i-1 && j < 10)
-        {
-            
-            nombre = nombre + ((str[k] - '0')*puissance);
-             
-                puissance = puissance / 10;
-                k++ ;
-            
-        }
-
-        
-        dernier_chiffre = nombre % 10;
-        
-        if (dernier_chiffre<0)
-        {
-            dernier_chiffre = -dernier_chiffre;
-        }
-        
-           
-      if (dernier_chiffre != (str[i-1] - '0') )
+    while ( !puissance == 0 && k <= i-1 && j < 10)
+    {
+        if (nombre > (2147483648 -((str[k] - '0')*puissance) ))
         {
             nombre = 0;
-        } 
-        
-        if (str[posi_prem_nbr-1] == '-')
-        {
-            nombre = -nombre;
+            puissance = 0;
         }
+        else
+        {
+            nombre = nombre + ((str[k] - '0')*puissance);
+        }
+            
+        puissance = puissance / 10;
+        k++ ;
+    
+    }
+
+    if (nombre == -2147483648 && str[posi_prem_nbr-1] != '-'  )
+    {
+        nombre = 0;
+    } 
+
+    
+    if (str[posi_prem_nbr-1] == '-')
+    {
+        nombre = -nombre;
+    }
 
     return nombre;
 
