@@ -13,7 +13,7 @@ int my_getnbr(char const *str){
     int nombre = 0;
     
    
-    while ( str[i] <= '0' || str[i] >= '9')
+    while ( str[i] <= '0' || str[i] >= '9') 
     {
         i++; 
         posi_prem_nbr = i ; //position du premier chiffre
@@ -21,7 +21,7 @@ int my_getnbr(char const *str){
     } 
     
     
-    while ((str[i] -'0') <= 9 )
+    while ((str[i] -'0') <= 9 ) // rechercher les autres chiffres
     {  
         i++;  // a la fin de la boucle la position du dernier chiffre du nombre +1
         j++; // expo puissance 10 du nombre ex: 10= 1
@@ -34,10 +34,10 @@ int my_getnbr(char const *str){
     k = posi_prem_nbr;
     while ( !puissance == 0 && k <= i-1 && j < 10)
     {
-        if (nombre > (2147483648 -((str[k] - '0')*puissance) ))
+        if (nombre > ((__INT_MAX__ +1) -((str[k] - '0')*puissance) ))
         {
             nombre = 0;
-            puissance = 0;
+            puissance = 0; 
         }
         else
         {
@@ -49,7 +49,7 @@ int my_getnbr(char const *str){
     
     }
 
-    if (nombre == -2147483648 && str[posi_prem_nbr-1] != '-'  )
+    if (nombre == -(__INT_MAX__ +1) && str[posi_prem_nbr-1] != '-'  )
     {
         nombre = 0;
     } 
