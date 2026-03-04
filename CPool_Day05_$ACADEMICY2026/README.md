@@ -1,4 +1,4 @@
-# 💻 CPool Day 05 — Récursivité & Fonctions mathématiques
+# 💻 CPool Day 05 — Récursivité 
 
 ✨ Projet C — Approfondissement de la récursivité et implémentation de fonctions mathématiques ✨
 
