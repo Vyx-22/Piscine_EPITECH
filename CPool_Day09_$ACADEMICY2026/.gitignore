@@ -1,0 +1,14 @@
+# Ignorer les fichiers exécutables
+*.exe
+*.out
+output
+temp
+
+# Fichiers objets compilés
+*.o
+*.obj
+
+# Dossiers binaires ou de debug
+/bin/
+/Debug/
+/Release/

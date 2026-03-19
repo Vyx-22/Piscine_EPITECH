@@ -1,0 +1,1 @@
+#define ABC(value) ((value)< 0? -(value) : (value))

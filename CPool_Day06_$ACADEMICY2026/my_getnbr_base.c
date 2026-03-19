@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int my_putnbr_base(char const *str, char const *base){
+int my_getnbr_base(char const *str, char const *base){
     
     int i = 0;
     int j = 0;

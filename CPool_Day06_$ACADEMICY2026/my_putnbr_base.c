@@ -29,7 +29,7 @@ int my_putnbr_base(int nbr, char const *base){
 
         if (nbr >= i)
         {
-        my_strcp(nbr_copie / i, base);
+        my_putnbr_base(nbr_copie / i, base);
         }
             
         my_putchar(base[nbr_copie % i]);
